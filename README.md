@@ -1,0 +1,2 @@
+# simple-crawl
+Python, scrapy
