@@ -8,7 +8,6 @@ class StoSpider(scrapy.Spider):
     start_urls = []
     for i in range(6000):
         start_urls.append('https://stackoverflow.com/questions/tagged/javascript?tab=votes&page=' + str(i+1) + '&pagesize=50')
-    #start_urls = ['http://stackoverflow.com/questions?sort=votes']
 
     def parse(self, response):
         for href in response.css('.question-summary h3 a::attr(href)'):
